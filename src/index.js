@@ -16,12 +16,14 @@ export default class App extends Component {
           <Title>React Native Animations</Title>
         </Header>
 
-        <Content>
-          <Button block> Primary </Button>
-          <Button block success> Success </Button>
-          <Button block info> Info </Button>
-          <Button block warning> Warning </Button>
-          <Button block danger> Danger </Button>
+        <Content style={styles.content}>
+          <Button block style={styles.button}> Styles Animation </Button>
+          <Button block style={styles.button}> Scale Animation </Button>
+          <Button block style={styles.button}> Draggable Card </Button>
+          <Button block style={styles.button}> Colors Animation </Button>
+          <Button block style={styles.button}> Rotation Animation </Button>
+          <Button block style={styles.button}> Sequence Animation </Button>
+          <Button block style={styles.button}> Stagger Animations </Button>
         </Content>
 
       </Container>
@@ -46,5 +48,11 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
+  content: {
+    margin: 5,
+  },
+  button: {
+    margin: 5,
+  }
 });
 
