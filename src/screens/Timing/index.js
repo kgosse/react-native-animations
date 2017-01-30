@@ -3,14 +3,35 @@ import React, { Component } from 'react';
 import {
   StyleSheet,
   Text,
-  View
+  View,
+  Animated,
+  Easing
 } from 'react-native';
 import { Actions } from 'react-native-router-flux';
-
-import { Container, Header, Title, Content, Button, Icon } from 'native-base';
+import { Container, Header, Title, Button, Icon } from 'native-base';
 
 export default class Timing extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      animatedValue: new Animated.Value(100)
+    };
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      Animated.timing(this.state.animatedValue, {
+        toValue: 200,
+        duration: 1500,
+        easing: Easing.bounce
+      }).start()
+    }, 1000);
+  }
+
   render() {
+    const animatedStyle = { height: this.state.animatedValue };
     return (
       <Container>
         <Header>
@@ -20,9 +41,9 @@ export default class Timing extends Component {
           <Title>Styles Animation</Title>
         </Header>
 
-        <Content style={styles.content}>
-
-        </Content>
+          <View style={styles.content}>
+              <Animated.View style={[styles.box, animatedStyle]}/>
+          </View>
 
       </Container>
     );
@@ -30,26 +51,14 @@ export default class Timing extends Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
   content: {
-    margin: 5,
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center'
   },
-  button: {
-    margin: 5,
+  box: {
+    backgroundColor: "#333",
+    width: 100,
+    height: 100,
   }
 });
