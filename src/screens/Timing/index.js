@@ -7,25 +7,21 @@ import {
 } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 
+import { Container, Header, Title, Content, Button, Icon } from 'native-base';
 
-import { Container, Header, Title, Content, Button } from 'native-base';
-
-export default class Home extends Component {
+export default class Timing extends Component {
   render() {
     return (
       <Container>
         <Header>
-          <Title>React Native Animations</Title>
+          <Button transparent onPress={() => Actions.pop()}>
+            <Icon name='ios-arrow-back' />
+          </Button>
+          <Title>Styles Animation</Title>
         </Header>
 
         <Content style={styles.content}>
-          <Button block style={styles.button} onPress={Actions.Timing}> Styles Animation </Button>
-          <Button block style={styles.button}> Scale Animation </Button>
-          <Button block style={styles.button}> Draggable Card </Button>
-          <Button block style={styles.button}> Colors Animation </Button>
-          <Button block style={styles.button}> Rotation Animation </Button>
-          <Button block style={styles.button}> Sequence Animation </Button>
-          <Button block style={styles.button}> Stagger Animations </Button>
+
         </Content>
 
       </Container>
