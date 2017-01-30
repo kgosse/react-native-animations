@@ -20,7 +20,7 @@ export default class Home extends Component {
 
         <Content style={styles.content}>
           <Button block style={styles.button} onPress={Actions.Timing}> Styles Animation </Button>
-          <Button block style={styles.button}> Scale Animation </Button>
+          <Button block style={styles.button} onPress={Actions.Scale}> Scale Animation </Button>
           <Button block style={styles.button}> Draggable Card </Button>
           <Button block style={styles.button}> Colors Animation </Button>
           <Button block style={styles.button}> Rotation Animation </Button>
