@@ -10,7 +10,7 @@ import {
 import { Actions } from 'react-native-router-flux';
 import { Container, Header, Title, Button, Icon } from 'native-base';
 
-export default class Timing extends Component {
+export default class Styles extends Component {
 
   constructor(props) {
     super(props);

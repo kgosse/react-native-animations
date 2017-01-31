@@ -19,13 +19,13 @@ export default class Home extends Component {
         </Header>
 
         <Content style={styles.content}>
-          <Button block style={styles.button} onPress={Actions.Timing}> Styles Animation </Button>
+          <Button block style={styles.button} onPress={Actions.Styles}> Styles Animation </Button>
           <Button block style={styles.button} onPress={Actions.Scale}> Scale Animation </Button>
           <Button block style={styles.button} onPress={Actions.Card}> Draggable Card </Button>
           <Button block style={styles.button} onPress={Actions.Colors}> Colors Animation </Button>
           <Button block style={styles.button} onPress={Actions.Rotation}> Rotation Animation </Button>
           <Button block style={styles.button} onPress={Actions.Sequence}> Sequence Animation </Button>
-          <Button block style={styles.button}> Stagger Animations </Button>
+          <Button block style={styles.button} onPress={Actions.Stagger}> Stagger Animations </Button>
         </Content>
 
       </Container>
