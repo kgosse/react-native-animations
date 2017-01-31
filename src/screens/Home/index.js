@@ -24,7 +24,7 @@ export default class Home extends Component {
           <Button block style={styles.button} onPress={Actions.Card}> Draggable Card </Button>
           <Button block style={styles.button} onPress={Actions.Colors}> Colors Animation </Button>
           <Button block style={styles.button} onPress={Actions.Rotation}> Rotation Animation </Button>
-          <Button block style={styles.button}> Sequence Animation </Button>
+          <Button block style={styles.button} onPress={Actions.Sequence}> Sequence Animation </Button>
           <Button block style={styles.button}> Stagger Animations </Button>
         </Content>
 
