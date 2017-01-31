@@ -12,7 +12,7 @@ import { Container, Header, Title, Button, Icon } from 'native-base';
 
 const {height} = Dimensions.get("window");
 
-export default class animatedbasic extends Component {
+export default class Stagger extends Component {
 
   componentWillMount() {
     this.animatedValue1 = new Animated.Value(0);
