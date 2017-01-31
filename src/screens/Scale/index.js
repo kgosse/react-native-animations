@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Actions } from 'react-native-router-flux';
 import { AppRegistry, StyleSheet, Text, View, TouchableWithoutFeedback, Animated } from 'react-native';
+import { Actions } from 'react-native-router-flux';
 import { Container, Header, Title, Button, Icon } from 'native-base';
 
 export default class Scale extends Component {
