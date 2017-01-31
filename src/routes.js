@@ -6,6 +6,7 @@ import Timing from './screens/Timing';
 import Scale from './screens/Scale';
 import Card from './screens/Card';
 import Colors from './screens/Colors';
+import Rotation from './screens/Rotation';
 
 export default class Routes extends Component {
   render() {
@@ -17,6 +18,7 @@ export default class Routes extends Component {
           <Scene key="Scale" component={Scale} hideNavBar />
           <Scene key="Card" component={Card} hideNavBar />
           <Scene key="Colors" component={Colors} hideNavBar />
+          <Scene key="Rotation" component={Rotation} hideNavBar />
         </Scene>
       </Router>
     )
